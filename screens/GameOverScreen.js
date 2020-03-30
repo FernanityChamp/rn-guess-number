@@ -1,12 +1,13 @@
 import React from 'react'
 import { StyleSheet, View, Text, Button } from 'react-native'
 
+import TextStyled from '../components/TextStyled'
 
 const GameOverScreen = props => (
     <View style={styles.screen}>
-        <Text>Game is Over!</Text>
-        <Text>Numbers of rounds: {props.roundsNumber}</Text>
-        <Text>Number was: {props.userNumber}</Text>
+        <TextStyled>Game is Over!</TextStyled>
+        <TextStyled>Numbers of rounds: {props.roundsNumber}</TextStyled>
+        <TextStyled>Number was: {props.userNumber}</TextStyled>
         <Button title='NEW GAME' onPress={props.onRestart} />
     </View>
 )

@@ -5,6 +5,8 @@ import Card from '../components/Card'
 import Input from '../components/Input'
 import NumberContainer from '../components/NumberContainer'
 
+import TextStyled from '../components/TextStyled'
+
 import Colors from '../constants/colors'
 
 
@@ -51,9 +53,9 @@ const StartGameScreen = props => {
             Keyboard.dismiss()
         }}>
             <View style={styles.screen}>
-                <Text style={styles.title}>Start a New Game</Text>
+                <TextStyled customStyles={styles.title}>Start a New Game</TextStyled>
                 <Card style={styles.inputContainer}>
-                    <Text>Select a number:</Text>
+                    <TextStyled customStyles={styles.subtitle}>Select a number:</TextStyled>
                     <Input 
                         style={styles.input} 
                         placeholder='Number'
@@ -91,8 +93,12 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start'
     },
     title: {
-        fontSize: 20,
-        marginVertical: 10
+        marginVertical: 10,
+        fontFamily: 'open-sans-bold'
+    },
+    subtitle: {
+        fontSize: 16,
+        fontFamily: 'open-sans'
     },
     inputContainer: {
         width: 300,
@@ -101,7 +107,8 @@ const styles = StyleSheet.create({
     },
     input: {
         width: '40%',
-        textAlign: 'center'
+        textAlign: 'center',
+        fontFamily: 'open-sans'
     },
     buttons: {
         flexDirection: 'row',

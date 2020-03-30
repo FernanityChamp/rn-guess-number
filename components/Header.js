@@ -3,9 +3,11 @@ import { View, Text, StyleSheet } from 'react-native'
 
 import Colors from '../constants/colors'
 
+import TextStyled from '../components/TextStyled'
+
 const Header = props => (
     <View style={styles.header}>
-        <Text style={styles.headerTitle}>{props.title}</Text>
+        <TextStyled customStyles={styles.headerTitle}>{props.title}</TextStyled>
     </View>
 )
 
@@ -20,7 +22,7 @@ const styles = StyleSheet.create({
     },
     headerTitle: {
         color: Colors.primaryText,
-        fontSize: 18
+        fontFamily: 'open-sans-bold'
     }
 })
 
